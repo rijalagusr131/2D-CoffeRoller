@@ -16,7 +16,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &2866551204215664826
 Transform:
@@ -126,7 +126,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5890108869091789854
 Transform:
@@ -236,7 +236,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &7410284713916702537
 Transform:
@@ -346,7 +346,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &7410284714677627247
 Transform:
@@ -456,7 +456,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &7410284715313395366
 Transform:
@@ -566,7 +566,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &7410284715538020783
 Transform:
@@ -675,7 +675,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &805123568958834001
 Transform:
@@ -724,6 +724,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Diamond (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4959239705679618676, guid: 59f2bc799c23dcc4b8bdcb1b9da19a34,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4959239705679618677, guid: 59f2bc799c23dcc4b8bdcb1b9da19a34,
         type: 3}
       propertyPath: m_RootOrder
@@ -732,7 +737,7 @@ PrefabInstance:
     - target: {fileID: 4959239705679618677, guid: 59f2bc799c23dcc4b8bdcb1b9da19a34,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.2399998
+      value: 2.54
       objectReference: {fileID: 0}
     - target: {fileID: 4959239705679618677, guid: 59f2bc799c23dcc4b8bdcb1b9da19a34,
         type: 3}
@@ -799,6 +804,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Diamond (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4959239705679618676, guid: 59f2bc799c23dcc4b8bdcb1b9da19a34,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4959239705679618677, guid: 59f2bc799c23dcc4b8bdcb1b9da19a34,
         type: 3}
       propertyPath: m_RootOrder
@@ -807,7 +817,7 @@ PrefabInstance:
     - target: {fileID: 4959239705679618677, guid: 59f2bc799c23dcc4b8bdcb1b9da19a34,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.7800002
+      value: 3.81
       objectReference: {fileID: 0}
     - target: {fileID: 4959239705679618677, guid: 59f2bc799c23dcc4b8bdcb1b9da19a34,
         type: 3}
@@ -874,6 +884,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Diamond
       objectReference: {fileID: 0}
+    - target: {fileID: 4959239705679618676, guid: 59f2bc799c23dcc4b8bdcb1b9da19a34,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4959239705679618677, guid: 59f2bc799c23dcc4b8bdcb1b9da19a34,
         type: 3}
       propertyPath: m_RootOrder
@@ -882,7 +897,7 @@ PrefabInstance:
     - target: {fileID: 4959239705679618677, guid: 59f2bc799c23dcc4b8bdcb1b9da19a34,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.77
+      value: 1.27
       objectReference: {fileID: 0}
     - target: {fileID: 4959239705679618677, guid: 59f2bc799c23dcc4b8bdcb1b9da19a34,
         type: 3}

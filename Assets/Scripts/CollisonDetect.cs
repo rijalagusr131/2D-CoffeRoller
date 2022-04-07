@@ -8,7 +8,7 @@ public class CollisonDetect : MonoBehaviour
     {
         if(collision.transform.tag == "Enemy")
         {
-            Debug.Log("Game Over");
+            GameManager.Instance.GameOver();
         }
     }
 
