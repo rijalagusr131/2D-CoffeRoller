@@ -5,14 +5,11 @@ using UnityEngine;
 public class DiamondPick : MonoBehaviour
 {
     public AudioClip diamondSound;
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if(other.tag == "Player")
-        {
-            CharMoveController.numberOfDiamond += 1;
-            Debug.Log("DIAMOND:" + CharMoveController.numberOfDiamond);
+    private void OnTriggerEnter2D(Collider2D other){
+        if(other.tag == "Player"){
+            GameManager.Instance.numberOfDiamond += 1;
             AudioSource.PlayClipAtPoint(diamondSound, transform.position);
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
     }
 }

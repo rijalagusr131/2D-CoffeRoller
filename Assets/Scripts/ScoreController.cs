@@ -34,15 +34,4 @@ public class ScoreController : MonoBehaviour
             lastScoreHighlight += scoreHighlightRange;
         }
     }
-
-    public void FinishScoring()
-    {
-        // set high score
-        if (currentScore > ScoreData.highScore)
-        {
-            ScoreData.highScore = currentScore;
-        }
-    }
-
-
 }
