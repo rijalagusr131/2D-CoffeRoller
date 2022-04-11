@@ -89,6 +89,7 @@ public class TerrainGeneratorController : MonoBehaviour
 
         newTerrain.transform.position = new Vector2(posX, 0f);
 
+
         spawnedTerrain.Add(newTerrain);
     }
 
@@ -124,6 +125,7 @@ public class TerrainGeneratorController : MonoBehaviour
             {
                 GameObject newItemFromPool = pool[item.name][0];
                 pool[item.name].Remove(newItemFromPool);
+                newItemFromPool.GetComponent<TerrainTemplateController>().SpawnObject();
                 newItemFromPool.SetActive(true);
                 return newItemFromPool;
             }

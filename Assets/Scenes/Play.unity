@@ -2212,17 +2212,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   terrainTemplates:
-  - {fileID: 4916438387988611233, guid: 34980284fc23776449acf3520dd9405e, type: 3}
-  - {fileID: 4916438387988611233, guid: dd84f588ef6dfef499bb7fc8e309755a, type: 3}
-  - {fileID: 4958757258159834171, guid: a3497b23cf3884d4bb08823835debf75, type: 3}
-  - {fileID: 4916438387988611233, guid: dd84f588ef6dfef499bb7fc8e309755a, type: 3}
-  - {fileID: 219172687273891693, guid: 28aa39af3559e1a48851518101166592, type: 3}
-  - {fileID: 4916438387988611233, guid: dd84f588ef6dfef499bb7fc8e309755a, type: 3}
+  - {fileID: 4916438387988611233, guid: 45f72284007ceac48aebed9f2460f567, type: 3}
+  - {fileID: 4916438387988611233, guid: 1e849a750c118884388c5e152b7cf2ec, type: 3}
+  - {fileID: 4916438387988611233, guid: ecc6187ee1f29984d92c18bb9efb5b56, type: 3}
+  - {fileID: 4916438387988611233, guid: ddc72f847e10fec4b96fdef6fe534da5, type: 3}
+  - {fileID: 4916438387988611233, guid: ecc6187ee1f29984d92c18bb9efb5b56, type: 3}
+  - {fileID: 4916438387988611233, guid: ddc72f847e10fec4b96fdef6fe534da5, type: 3}
+  - {fileID: 4916438387988611233, guid: cfd0bf39d70271c49b0f20c90875903d, type: 3}
   terrainTemplateWidth: 10
   earlyTerrainTemplates:
-  - {fileID: 4916438387988611233, guid: dd84f588ef6dfef499bb7fc8e309755a, type: 3}
-  - {fileID: 4916438387988611233, guid: dd84f588ef6dfef499bb7fc8e309755a, type: 3}
-  - {fileID: 4916438387988611233, guid: dd84f588ef6dfef499bb7fc8e309755a, type: 3}
+  - {fileID: 4916438387988611233, guid: 45f72284007ceac48aebed9f2460f567, type: 3}
+  - {fileID: 4916438387988611233, guid: 45f72284007ceac48aebed9f2460f567, type: 3}
   gameCamera: {fileID: 519420031}
   areaStartOffset: -8
   areaEndOffset: 8
