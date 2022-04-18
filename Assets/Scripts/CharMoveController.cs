@@ -18,14 +18,12 @@ public class CharMoveController : MonoBehaviour
     private bool isOnGround;
 
     private Rigidbody2D rig;
-    private Animator anim;
     private CharacterSoundController sound;
 
     // Start is called before the first frame update
     void Start()
     {
         rig = GetComponent<Rigidbody2D>();
-        anim = GetComponent<Animator>();
         sound = GetComponent<CharacterSoundController>();
     }
 
@@ -42,8 +40,6 @@ public class CharMoveController : MonoBehaviour
                 sound.PlayJump();
             }
         }
-        // change animation
-        anim.SetBool("isOnGround", isOnGround);
     }
 
     private void FixedUpdate()
@@ -51,7 +47,7 @@ public class CharMoveController : MonoBehaviour
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, groundRaycastDistance, groundLayerMask);
         if (hit)
         {
-            if (!isOnGround && rig.velocity.y <= 0)
+            if (!isOnGround)
             {
                 isOnGround = true;
             }
