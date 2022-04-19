@@ -37,6 +37,13 @@ public class GameManager : MonoBehaviour
     public GameObject gameOverScreen;
     public float fallPositionY;
 
+    [Header("UI")]
+    public GameObject toggleMuteOn;
+    private bool isMute;
+
+    public GameObject pauseMenu;
+    public bool isPause;
+
     [Header("Camera")]
     public CameraMove gameCamera;
 
@@ -57,12 +64,21 @@ public class GameManager : MonoBehaviour
     private void SwithCanvas(){
         switch(type){
             case CanvasType.MainMenu :
+                UserDataManager.Load();
+                isMute = ShowIsSoundMuted();
+                CheckIsMute();
+                CheckMuteButton();
                 AudioManager.instance.Play("Main Music");
             break;
             case CanvasType.PlayScene :
+                UserDataManager.Load();
                 if(character == null){
                     character = FindObjectOfType<CharMoveController>();
                 }
+                isPause = false;
+                isMute = ShowIsSoundMuted();
+                CheckIsMute();
+                CheckMuteButton();
                 numberOfDiamond = 0;
             break;
             default :
@@ -81,6 +97,15 @@ public class GameManager : MonoBehaviour
                 lastPositionX += distancePassed;
             }
 
+            if(isPause == true){
+                Time.timeScale = 0;
+                pauseMenu.SetActive(true);
+            }
+            else{
+                Time.timeScale = 1;
+                pauseMenu.SetActive(false);
+            }
+
             // game over
             if(character.transform.position.y < fallPositionY){
                 GameOver();
@@ -88,6 +113,26 @@ public class GameManager : MonoBehaviour
 
             diamondText.text = numberOfDiamond.ToString();
         }
+    }
+
+    public void MuteToggle(){
+        isMute = !isMute;
+        CheckIsMute();
+        CheckMuteButton();
+        SetSoundMuted(isMute);
+    }
+
+    public void CheckIsMute(){
+        if (isMute == false){
+            AudioListener.volume = 0;
+        }
+        else{
+            AudioListener.volume = 1;
+        }
+    }
+
+    public void CheckMuteButton(){
+        toggleMuteOn.SetActive(isMute);
     }
 
     public void GameOver()
@@ -105,4 +150,18 @@ public class GameManager : MonoBehaviour
     public void LoadScene(string menu){
 		SceneManager.LoadScene(menu);
 	}
+
+    public bool ShowIsSoundMuted(){
+        return UserDataManager.Progress.IsSoundMuted;
+    }
+
+    public void SetSoundMuted(bool value){
+        UserDataManager.Progress.IsSoundMuted = value;
+        UserDataManager.Save();
+    }
+
+    public void PauseControl(){
+        isPause = !isPause;
+    }
+
 }
