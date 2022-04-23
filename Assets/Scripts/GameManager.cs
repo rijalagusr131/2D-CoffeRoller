@@ -56,7 +56,9 @@ public class GameManager : MonoBehaviour
     private CharMoveController character;
 
     private void Start() {
+        
         SwithCanvas();
+
     }
 
     private void Update() {
@@ -66,6 +68,7 @@ public class GameManager : MonoBehaviour
     private void SwithCanvas(){
         switch(type){
             case CanvasType.MainMenu :
+                //UserDataManager.Remove();
                 UserDataManager.Load();
                 isMute = ShowIsSoundMuted();
                 CheckIsMute();
@@ -103,16 +106,20 @@ public class GameManager : MonoBehaviour
             if (isTutorial == true)
             {
                 Time.timeScale = 0;
-            } else if (isPause == true){
+            }
+            else if (isPause == true && isTutorial != true)
+            {
                 Time.timeScale = 0;
                 pauseMenu.SetActive(true);
-            } else{
-                Time.timeScale = 1;
+            }
+            else
+            {
                 pauseMenu.SetActive(false);
+                Time.timeScale = 1;
             }
 
             // game over
-            if(character.transform.position.y < fallPositionY){
+            if (character.transform.position.y < fallPositionY){
                 GameOver();
             }
 
