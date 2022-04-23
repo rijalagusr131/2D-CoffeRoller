@@ -44,6 +44,8 @@ public class GameManager : MonoBehaviour
     public GameObject pauseMenu;
     public bool isPause;
 
+    public bool isTutorial;
+
     [Header("Camera")]
     public CameraMove gameCamera;
 
@@ -97,11 +99,14 @@ public class GameManager : MonoBehaviour
                 lastPositionX += distancePassed;
             }
 
-            if(isPause == true){
+            //tutorial
+            if (isTutorial == true)
+            {
+                Time.timeScale = 0;
+            } else if (isPause == true){
                 Time.timeScale = 0;
                 pauseMenu.SetActive(true);
-            }
-            else{
+            } else{
                 Time.timeScale = 1;
                 pauseMenu.SetActive(false);
             }
@@ -110,6 +115,8 @@ public class GameManager : MonoBehaviour
             if(character.transform.position.y < fallPositionY){
                 GameOver();
             }
+
+            
 
             diamondText.text = numberOfDiamond.ToString();
         }
@@ -158,6 +165,17 @@ public class GameManager : MonoBehaviour
     public void SetSoundMuted(bool value){
         UserDataManager.Progress.IsSoundMuted = value;
         UserDataManager.Save();
+    }
+
+    public void AddTutorialDone()
+    {
+        UserDataManager.Progress.IsTutorialDone = true;
+        UserDataManager.Save();
+    }
+
+    public bool ShowIsTutorialDone()
+    {
+        return UserDataManager.Progress.IsTutorialDone;
     }
 
     public void PauseControl(){
