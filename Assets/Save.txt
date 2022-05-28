@@ -1,4 +1,4 @@
 {
     "isSoundMuted": true,
-    "isTutorialDone": true
+    "isTutorialDone": false
 }
