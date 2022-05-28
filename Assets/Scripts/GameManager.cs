@@ -44,6 +44,8 @@ public class GameManager : MonoBehaviour
     public GameObject pauseMenu;
     public bool isPause;
 
+    public bool isTutorial;
+
     [Header("Camera")]
     public CameraMove gameCamera;
 
@@ -54,7 +56,9 @@ public class GameManager : MonoBehaviour
     private CharMoveController character;
 
     private void Start() {
+        
         SwithCanvas();
+
     }
 
     private void Update() {
@@ -64,6 +68,7 @@ public class GameManager : MonoBehaviour
     private void SwithCanvas(){
         switch(type){
             case CanvasType.MainMenu :
+                //UserDataManager.Remove();
                 UserDataManager.Load();
                 isMute = ShowIsSoundMuted();
                 CheckIsMute();
@@ -97,19 +102,28 @@ public class GameManager : MonoBehaviour
                 lastPositionX += distancePassed;
             }
 
-            if(isPause == true){
+            //tutorial
+            if (isTutorial == true)
+            {
+                Time.timeScale = 0;
+            }
+            else if (isPause == true && isTutorial != true)
+            {
                 Time.timeScale = 0;
                 pauseMenu.SetActive(true);
             }
-            else{
-                Time.timeScale = 1;
+            else
+            {
                 pauseMenu.SetActive(false);
+                Time.timeScale = 1;
             }
 
             // game over
-            if(character.transform.position.y < fallPositionY){
+            if (character.transform.position.y < fallPositionY){
                 GameOver();
             }
+
+            
 
             diamondText.text = numberOfDiamond.ToString();
         }
@@ -158,6 +172,17 @@ public class GameManager : MonoBehaviour
     public void SetSoundMuted(bool value){
         UserDataManager.Progress.IsSoundMuted = value;
         UserDataManager.Save();
+    }
+
+    public void AddTutorialDone()
+    {
+        UserDataManager.Progress.IsTutorialDone = true;
+        UserDataManager.Save();
+    }
+
+    public bool ShowIsTutorialDone()
+    {
+        return UserDataManager.Progress.IsTutorialDone;
     }
 
     public void PauseControl(){

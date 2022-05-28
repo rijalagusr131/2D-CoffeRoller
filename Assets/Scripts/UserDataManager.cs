@@ -21,7 +21,7 @@ public class UserDataManager
 
     public static void Save(){
         string json = JsonUtility.ToJson(Progress, true);
-        // File.WriteAllText(Application.dataPath + "/Save.txt", json);
+        File.WriteAllText(Application.dataPath + "/Save.txt", json);
         PlayerPrefs.SetString(PROGRESS_KEY, json);
     }
 
