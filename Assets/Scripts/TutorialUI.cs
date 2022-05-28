@@ -45,7 +45,7 @@ public class TutorialUI : MonoBehaviour {
                 if(Input.GetKeyDown(KeyCode.Space)) {
                     _tutorialIndex++;
                 }
-                if(Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
+                if(Input.GetMouseButtonDown(0))
                 {
                     _tutorialIndex++;
                 }
