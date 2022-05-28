@@ -29,7 +29,8 @@ public class GameManager : MonoBehaviour
     public CanvasType type;
 
     [Header("Scoring")]
-    public ScoreController score;
+    public Text scoreText;
+    public ScoreController scoreController;
     public float scoringRatio;
     private float lastPositionX;
 
@@ -53,12 +54,12 @@ public class GameManager : MonoBehaviour
     public Text diamondText;
 
     [Header("Character")]
-    private CharMoveController character;
+    public CharMoveController character;
 
-    private void Start() {
+    private void Awake() {
+        Application.targetFrameRate = 120;
         
         SwithCanvas();
-
     }
 
     private void Update() {
@@ -68,7 +69,7 @@ public class GameManager : MonoBehaviour
     private void SwithCanvas(){
         switch(type){
             case CanvasType.MainMenu :
-                //UserDataManager.Remove();
+                // UserDataManager.Remove();
                 UserDataManager.Load();
                 isMute = ShowIsSoundMuted();
                 CheckIsMute();
@@ -79,6 +80,12 @@ public class GameManager : MonoBehaviour
                 UserDataManager.Load();
                 if(character == null){
                     character = FindObjectOfType<CharMoveController>();
+                }
+                if(scoreText == null){
+                    scoreText   = GameObject.FindWithTag("ScoreText").GetComponent<Text>();
+                }
+                if(diamondText == null){
+                    diamondText   = GameObject.FindWithTag("DiamondText").GetComponent<Text>();
                 }
                 isPause = false;
                 isMute = ShowIsSoundMuted();
@@ -98,7 +105,7 @@ public class GameManager : MonoBehaviour
             int scoreIncrement = Mathf.FloorToInt(distancePassed / scoringRatio);
 
             if(scoreIncrement > 0){
-                score.IncreaseCurrentScore(scoreIncrement);
+                scoreController.IncreaseCurrentScore(scoreIncrement);
                 lastPositionX += distancePassed;
             }
 
@@ -123,9 +130,8 @@ public class GameManager : MonoBehaviour
                 GameOver();
             }
 
-            
-
             diamondText.text = numberOfDiamond.ToString();
+            scoreText.text = scoreController.GetCurrentScore().ToString();
         }
     }
 
