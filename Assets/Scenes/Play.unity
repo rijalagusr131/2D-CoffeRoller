@@ -182,7 +182,7 @@ GameObject:
   - component: {fileID: 88924249}
   m_Layer: 5
   m_Name: Text
-  m_TagString: Untagged
+  m_TagString: DiamondText
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1258,7 +1258,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &580278432
 GameObject:
@@ -1860,40 +1860,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6711733d9b6709c4291356ae22429fba, type: 3}
---- !u!1 &786270577 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7178846252653383179, guid: dabe90a711ace6b4bb40b55b7a9e3d87,
-    type: 3}
-  m_PrefabInstance: {fileID: 7178846253541831145}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &786270579
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 786270577}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83882f95114649e4ab8e38743f8201b2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scoreHighlightRange: 5
-  sound: {fileID: 1549773770}
---- !u!114 &786270580
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 786270577}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac5c044cf58b99e4fbaf969c0c41a6c4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  score: {fileID: 948852244}
-  scoreController: {fileID: 786270579}
 --- !u!1 &877147073
 GameObject:
   m_ObjectHideFlags: 0
@@ -2161,7 +2127,7 @@ GameObject:
   - component: {fileID: 948852244}
   m_Layer: 5
   m_Name: Current score value
-  m_TagString: Untagged
+  m_TagString: ScoreText
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2218,7 +2184,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 0
-  m_Text: 0000000000
+  m_Text: 0
 --- !u!222 &948852245
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2338,7 +2304,7 @@ MonoBehaviour:
   m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
-    m_Bits: 823
+    m_Bits: 855
 --- !u!114 &1163255118
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2397,7 +2363,7 @@ RectTransform:
   - {fileID: 1298601954}
   - {fileID: 405354193}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2542,7 +2508,7 @@ MonoBehaviour:
   m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 855
 --- !u!114 &1323396019
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2601,7 +2567,7 @@ RectTransform:
   - {fileID: 1423264552}
   - {fileID: 394148368}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2862,7 +2828,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1423264551
 PrefabInstance:
@@ -3363,7 +3329,7 @@ RectTransform:
   m_Children:
   - {fileID: 908544828}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3582,20 +3548,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7178846252653383178, guid: dabe90a711ace6b4bb40b55b7a9e3d87,
-        type: 3}
-      propertyPath: type
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7178846252653383178, guid: dabe90a711ace6b4bb40b55b7a9e3d87,
-        type: 3}
-      propertyPath: score
+    - target: {fileID: 786270579, guid: dabe90a711ace6b4bb40b55b7a9e3d87, type: 3}
+      propertyPath: sound
       value: 
-      objectReference: {fileID: 786270579}
-    - target: {fileID: 7178846252653383178, guid: dabe90a711ace6b4bb40b55b7a9e3d87,
-        type: 3}
-      propertyPath: isPause
-      value: 0
+      objectReference: {fileID: 1549773770}
+    - target: {fileID: 786270579, guid: dabe90a711ace6b4bb40b55b7a9e3d87, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7178846252653383178, guid: dabe90a711ace6b4bb40b55b7a9e3d87,
         type: 3}
@@ -3607,16 +3566,6 @@ PrefabInstance:
       propertyPath: gameCamera
       value: 
       objectReference: {fileID: 519420030}
-    - target: {fileID: 7178846252653383178, guid: dabe90a711ace6b4bb40b55b7a9e3d87,
-        type: 3}
-      propertyPath: diamondText
-      value: 
-      objectReference: {fileID: 88924249}
-    - target: {fileID: 7178846252653383178, guid: dabe90a711ace6b4bb40b55b7a9e3d87,
-        type: 3}
-      propertyPath: scoringRatio
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 7178846252653383178, guid: dabe90a711ace6b4bb40b55b7a9e3d87,
         type: 3}
       propertyPath: toggleMuteOn
@@ -3695,7 +3644,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 7178846253541831145}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 786270577}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4cca8b536af176b44b35d42909a738ec, type: 3}

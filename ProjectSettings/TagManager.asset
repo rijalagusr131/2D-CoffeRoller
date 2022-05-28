@@ -8,6 +8,8 @@ TagManager:
   - Obstacle
   - Enemy
   - ToggleOn
+  - ScoreText
+  - DiamondText
   layers:
   - Default
   - TransparentFX
